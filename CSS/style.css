@@ -1,0 +1,467 @@
+/* Start Global Rules */
+* { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body , button {
+    font-family: 'Josefin Sans', sans-serif;
+    /* Regular 400 */
+}
+h1{
+    font-family: 'Junge', serif;
+    font-weight: 400;
+}
+/* End Global Rules */
+/* Start Variables */
+:root{
+    --mainColor: #2B4349;
+    --boxMainColor: #ecd4c4;
+    --boxSecondColor: #f4bcbc;
+}
+/* End Variables */
+/* Start Header */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 80px ;
+    border-bottom: 1px solid #dedede;
+}
+header a .logo{
+    width: 170px;
+}
+nav a , nav i{
+    text-decoration: none;
+    margin-left: 35px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--mainColor);
+}
+nav .fa-sharp{
+    font-size: 40px;
+    font-weight: 300;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+/* Small */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 15px ;
+    }
+    header a .logo{
+        width: 100px;
+    }
+    nav a , nav i{
+        display: none;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    header {
+        padding: 10px 40px ;
+    }
+    header a .logo{
+        width: 150px;
+    }
+    nav a , nav i{
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    header {
+        padding: 10px 80px ;
+    }
+    header a .logo{
+        width: 200px;
+    }
+}
+/* End Header */
+/* Start Main */
+main{
+    height: calc(100vh - 100px);
+    background: linear-gradient(to right, #ecd4c4, #f4bcbc);
+    margin: 0px 80px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+main h1{
+    font-size: 60px;
+    color: var(--mainColor);
+    margin-left: 110px;
+    width: 100%;
+}
+main button{
+    padding: 20px 40px;
+    border: none;
+    margin: 20px 110px 0px;
+    color: var(--mainColor);
+}
+main .icons a{
+    text-decoration: none;
+    color: var(--mainColor);
+    margin-right: 20px;
+    font-size: 14px;
+}
+main .icons{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+main img{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-right: 110px;
+}
+@media (max-width: 768px) {
+    main {
+        margin: 0px 15px ;
+        flex-direction: column;
+        text-align: center;
+    }
+    main h1{
+        font-size: 30px;
+        margin-left: 0px;
+    }
+    main img{
+        width: 200px;
+        height: 200px;
+        margin: 10px 0px;
+    }
+    main button{
+        padding: 5px 20px;
+        margin: 10px 0;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    main {
+        margin: 0px 80px ;
+        flex-direction: column;
+        text-align: center;
+    }
+    main h1{
+        font-size: 40px;
+        margin-left: 0px;
+    }
+    main img{
+        width: 400px;
+        height: 400px;
+        margin: 10px 0px;
+    }
+    main button{
+        padding: 10px 40px;
+        margin: 10px 0;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    main {
+        margin: 0px 120px 60px ;
+    }
+    main h1{
+        margin: 0px 30px;
+    }
+    main img{
+        width: 350px;
+        height: 350px;
+        margin: 0px 30px;
+    }
+    main button{
+        margin: 0px 30px;
+    }
+}
+/* End Main */
+/* Start Section one */
+.services{
+    margin: 0px 200px 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px;
+}
+.mainSub{
+    grid-row: 1 / span 2;
+    grid-column: 1;
+}
+.mainSub h1{
+    font-size: 50px;
+    font-weight: 300;
+    color: var(--mainColor);
+}
+.mainSub h6{
+    color: gray;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.sub h3{
+    font-weight: 400;
+    color: var(--mainColor);
+    display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.sub .pink{
+    color: var(--boxSecondColor);
+}
+.sub p{
+    color: gray;
+    margin-left: 30px;
+    font-weight: 400;
+}
+.sub i{
+    font-size: 12px;
+}
+@media (max-width: 768px) {
+    .services {
+        margin: 25px 25px 15px ;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+    .mainSub{
+        grid-row: 1 / span 4;
+    }
+    .mainSub h1{
+        font-size: 30px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .services {
+        margin: 40px 80px ;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+    .mainSub{
+        grid-row: 1 / span 4;
+    }
+    .mainSub h1{
+        font-size: 40px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .services {
+        margin: 60px 120px;
+    }
+}
+/* End Section One */
+/* Start Section Two */
+.team{
+    margin: 0px 200px 200px ;
+}
+.cardsContainer{
+    display: flex;
+    justify-content: center;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+.mainSubTeam{
+margin-bottom: 40px;
+}
+.mainSubTeam h1{
+    font-size: 50px;
+    font-weight: 300;
+    color: var(--mainColor);
+}
+.mainSubTeam h6{
+    color: gray;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.image-container {
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+    position: relative;
+}
+.image-container div{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 20px;
+}
+.image-container i{
+    margin-bottom: 10px;
+    display: block;
+    color: var(--mainColor);
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card h3{
+    margin-top: 15px;
+    font-weight: 400;
+    color: var(--mainColor);
+    margin-bottom: 10px;
+}
+.card h4{
+    color: gray;
+    font-weight: 400;
+}
+@media (max-width: 768px) {
+    .team{
+        margin: 25px 15px;
+    }
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .mainSubTeam h1{
+        font-size: 30px;
+    }
+    .mainSubTeam{
+        margin: 25px 15px;
+    }
+    .image-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .team{
+        margin: 40px 80px;
+    }
+    .mainSubTeam h1{
+        font-size: 40px;
+    }
+    .mainSubTeam{
+        margin: 25px 15px;
+    }
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .team{
+        margin: 60px 120px;
+    }
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+/* End Section Two */
+/* Start Section Two */
+.awardsSection{
+    margin: 0px 200px 150px;
+}
+.mainSubAwards{
+    margin-bottom: 40px;
+}
+.mainSubAwards h1{
+    font-size: 50px;
+    font-weight: 300;
+    color: var(--mainColor);
+}
+.mainSubAwards h6{
+    color: gray;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.awardsImage img{
+    width: 450px;
+    height: auto;
+}
+.awards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.awardCard .mono{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* margin-bottom: 40px; */
+}
+.mono h2{
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--mainColor);
+    margin-right: 100px;
+}
+.mono div h3{
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--mainColor);
+    padding-bottom: 10px;
+}
+.mono div h4{
+    font-weight: 350;
+    font-size: 18px;
+    color: gray;
+    width: 98%;
+    line-height: 25px;
+}
+.awardCard .two , .awardCard .three{
+    margin-top: 40px;
+}
+.mono{
+    border-bottom: 1px solid #2B4349;
+    padding-bottom: 25px;
+}
+@media (max-width: 768px) {
+    .awards{
+        flex-direction: column;
+    }
+    .awardsSection{
+        margin: 0px 25px 15px ;
+    }
+    .mainSubAwards h1{
+        font-size: 30px;
+    }
+    .awardsImage img {
+        margin-top: 30px;
+        width: 200px;
+    }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+    .awards{
+        flex-direction: column;
+    }
+    .awardsSection{
+        margin: 40px 80px ;
+    }
+    .mainSubAwards h1{
+        font-size: 40px;
+    }
+    .awardsImage img {
+        margin-top: 30px;
+        width: 350px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .awardsSection{
+        margin: 60px 120px ;
+    }
+    .awardsImage img {
+        width: 350px;
+    }
+}
+/* End Section Two */
+/* Footer Footer */
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 80px ;
+    color: gray;
+    background-color: #f4f4f4;
+}
+@media (max-width: 768px) {
+    footer{
+        padding: 20px 15px ;
+    }
+}
+/* End Footer */
